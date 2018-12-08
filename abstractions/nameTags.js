@@ -1,6 +1,6 @@
 module.exports = [
-    "Kamilah",
-    "Stuart",
-    "Ron",
-    "Krissy"
+  'Kamilah',
+  'Stuart',
+  'Ron',
+  'Krissy'
 ]

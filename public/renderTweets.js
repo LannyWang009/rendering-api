@@ -1,7 +1,7 @@
 
-function renderTweets(tweets) {
-    var tweetsHTML = tweets.map(function(tweet){
-        return `
+function renderTweets (tweets) {
+  var tweetsHTML = tweets.map(function (tweet) {
+    return `
             <div class="bg-white p-2 m-2 w-50">
                 <div class="d-flex align-items-center">
                     <img width="50" src="${tweet.user.profilePic}" />
@@ -24,20 +24,19 @@ function renderTweets(tweets) {
                 </div>
             </div>
         `
-    });
+  })
 
-    return `
+  return `
         <div class="d-flex flex-column justify-content-start align-items-center mt-5">
             ${tweetsHTML.join('')}
         </div>
     `
 }
 
-function tweets() {
-    var content = document.getElementById('content');
+function tweets () {
+  var content = document.getElementById('content')
 
-    axios.get('/api/tweets').then(function (response) {
-        content.innerHTML = renderTweets(response.data);
-    });
-
+  axios.get('/api/tweets').then(function (response) {
+    content.innerHTML = renderTweets(response.data)
+  })
 }
